@@ -27,11 +27,11 @@
             <h2 class="fs-title"> Create Account</h2>
             <h3 class="fs-subtitle"> Glad to see you here!</h3>
             <p1 class="sub1">Account</p1>
-            <input type="text" name="email" placeholder="example@email.com">
+            <input type="text" name="email" id="email_input" placeholder="example@email.com" required="required">
             <p1 class="sub1">Password</p1>
-            <input type="password" name="pass" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+            <input type="password" name="pass" id="pass_input" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
             <p1 class="sub1">Confirm Password</p1>
-            <input type="password" name="cpass" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+            <input type="password" name="cpass" id="cpass_input" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
             <input type="button" name="next" class="next action-button" value="SUBMIT & NEXT">
         </fieldset>
 
@@ -97,7 +97,14 @@
             <input type="text" name="year" placeholder="123" min="1980" max="2018" style="width:147px;">
             <input type="number" name="month" placeholder="MM" min="1" max="12" style="width:147px;margin-left:25px;">
             <input type="number" name="day" placeholder="DD" min="1" max="31" style="width:147px;margin-left:25px;">
-            <input type="submit" name="submit" class="next action-button" value="DONE" />
+            <input type="button" name="submit" class="next action-button" value="DONE" />
+        </fieldset>
+
+        <fieldset>
+            <h2 class="fs-title"> Congratulations</h2>
+            <h3 class="fs-subtitle"> Now you're one of us!  </h3>
+            <div style="color: #BEE1FF;font-size: 180px;margin: 0 auto;text-align:center;"><i class="fas fa-smile"></i><br /></div>
+            <h1 style="font-family:'Roboto';color:#0275D8;font-style:italic;font-size:14px;text-align:center;">Redirected to homepage after 5 seconds...</h1><br /><br /><br /><br />
         </fieldset>
     </form>
     <script src="js/steps.js"></script>
