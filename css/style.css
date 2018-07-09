@@ -1,0 +1,203 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/*basic reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    /*Image only BG fallback*/
+    /*background = gradient + image pattern combo*/
+    background: #999999;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+/*form styles*/
+#msform {
+    width: 700px;
+    margin: 50px auto;
+    position: relative;
+}
+
+    #msform fieldset {
+        background: white;
+        border: 0 none;
+        border-radius: 3px;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+        padding: 20px 30px;
+        box-sizing: border-box;
+        width: 80%;
+        margin: 0 10%;
+        /*stacking fieldsets above each other*/
+        position: relative;
+    }
+        /*Hide all except first fieldset*/
+        #msform fieldset:not(:first-of-type) {
+            display: none;
+        }
+
+    /*inputs*/
+    #msform input, #msform textarea {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: #2C3E50;
+        font-size: 13px;
+    }
+
+    /*buttons*/
+    #msform .action-button {
+        background: #0275D8;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 1px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 10px 5px;
+        text-align: center;
+    }
+
+        #msform .action-button:hover, #msform .action-button:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+        }
+
+/*headings*/
+.fs-title {
+    font-size: 48px;
+    color: #2C3E50;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sub1 {
+    font-size: 20px;
+    text-align: left;
+}
+
+/*image*/
+.image_upload {
+    width: 490px;
+    text-align: center;
+}
+
+    .image_upload > input {
+        display: none;
+    }
+
+    .image_upload img {
+        width: 80px;
+        cursor: pointer;
+    }
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+    text-align: center;
+}
+
+    #progressbar li {
+        list-style-type: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 9px;
+        width: 25%;
+        float: left;
+        position: relative;
+    }
+
+        #progressbar li:before {
+            content: counter(step);
+            counter-increment: step;
+            width: 20px;
+            line-height: 20px;
+            display: block;
+            font-size: 10px;
+            color: #333;
+            background: white;
+            border-radius: 3px;
+            margin: 0 auto 5px auto;
+        }
+        /*progressbar connectors*/
+        #progressbar li:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: white;
+            position: absolute;
+            left: -50%;
+            top: 9px;
+            z-index: -1; /*put it behind the numbers*/
+        }
+
+        #progressbar li:first-child:after {
+            /*connector not needed before the first step*/
+            content: none;
+        }
+        /*marking active/completed steps green*/
+        /*The number of the step and the connector before it = green*/
+        #progressbar li.active:before, #progressbar li.active:after {
+            background: #0275D8;
+            color: white;
+        }
+
+.visa {
+    height: 40px;
+    padding: 0px;
+    margin: 5px 0;
+}
+
+    .visa::-webkit-input-placeholder {
+        font-family: FontAwesome, 'Roboto';
+        font-weight: normal;
+        overflow: visible;
+        vertical-align: top;
+        display: inline-block !important;
+        padding-left: 5px;
+        padding-top: 2px;
+        color: #757575;
+    }
+
+    .visa::-moz-placeholder {
+        font-family: FontAwesome, 'Roboto';
+        font-weight: normal;
+        overflow: visible;
+        vertical-align: top;
+        display: inline-block !important;
+        padding-left: 5px;
+        padding-top: 2px;
+        color: #757575;
+    }
+
+    .visa:-ms-input-placeholder {
+        font-family: FontAwesome, 'Roboto';
+        font-weight: normal;
+        overflow: visible;
+        vertical-align: top;
+        display: inline-block !important;
+        padding-left: 5px;
+        padding-top: 2px;
+        color: #757575;
+    }
